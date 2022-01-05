@@ -1,0 +1,25 @@
+<main class="form-signin text-center">
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="form-signin">
+     
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInput" placeholder="userName" #userName="ngModel"
+         [(ngModel)]="model.userName" id="userName" name="userName" required  autofocus>
+        <label for="floatingInput">UserName</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="password"
+         #password="ngModel" [(ngModel)]="model.password" id="password" name="password" required>
+        <label for="floatingPassword">Password</label>
+      </div>
+  
+   
+      <button class="w-100 btn btn-lg btn-primary" type="submit" [disabled]="loginForm.invalid">Sign in</button>
+      <span>loginForm.valid:{{loginForm.valid | json}}</span>
+      <span>loginForm.value:{{loginForm.value | json}}  </span>
+      <p class="mt-5 mb-3 text-muted">&copy; Lova Test</p>
+    
+    </form>
+
+  </main>

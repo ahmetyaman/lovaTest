@@ -1,0 +1,43 @@
+<h4>Corona Operation</h4>
+
+
+<div class="row">
+    <div class="col-8">
+        <input  [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="filter" >
+        <small *ngIf="filterText" class="form-text text-muted"><strong>{{filterText}}</strong> </small>
+   </div>
+</div>
+
+<div class="row">
+
+  
+<table class="table table-hover">
+  <thead>
+    <tr>
+      
+        <th scope="col">country</th>
+        <th scope="col">totalCases</th>
+        <th scope="col">newCases</th>
+        <th scope="col">totalDeaths</th>
+        <th scope="col">newDeaths</th>
+        <th scope="col">totalRecovered</th>
+        <th scope="col">activeCases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let corona of coronaList | coronaFilter:filterText" class="table-default">
+     
+        <td>{{corona.country}}</td>
+        <td>{{corona.totalCases}}</td>
+        <td>{{corona.newCases}}</td>
+        <td>{{corona.totalDeaths}}</td>
+        <td>{{corona.newDeaths}}</td>
+        <td>{{corona.totalRecovered}}</td>
+        <td>{{corona.activeCases}}</td>
+   
+    </tr>
+
+   
+  </tbody>
+</table>
+</div>

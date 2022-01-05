@@ -1,0 +1,24 @@
+<h3>Record User</h3>
+
+<form [formGroup]="recordForm" (ngSubmit)="save()">
+
+    <div class="form-group">
+        <input type="text" id="userName" name="userName"  formControlName="userName" class="form-control" placeholder="userName"/>
+        <div class="alert alert-danger" *ngIf="recordForm.get('userName')?.hasError('required') && recordForm.get('userName')?.dirty">
+            Must
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" id="password" name="password" formControlName="password" class="form-control" placeholder="password"/>
+        <div class="alert alert-danger" *ngIf="recordForm.get('password')?.hasError('required') && recordForm.get('password')?.dirty">
+            Must
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="recordForm.invalid">Save</button>
+
+    <span> recordForm.value: {{recordForm.value |json}}</span>
+    <span> recordForm.valid: {{recordForm.valid |json}}</span>
+
+</form>
