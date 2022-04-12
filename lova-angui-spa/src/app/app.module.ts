@@ -17,6 +17,10 @@ import { LoginGuard } from './services/globalserv/login-guard';
 import { ChemistComponent } from './pages/chemist/chemist.component';
 import { CoronaComponent } from './pages/corona/corona.component';
 import { CoronaPipe } from './pages/corona/corona.pipe';
+import { LangTransPipe } from './services/globalpipes/langpipe/lang-trans.pipe';
+import { LangTranslationService } from './services/globalpipes/langpipe/lang-translation.service';
+import { LanguagewatchComponent } from './pages/languagewatch/languagewatch.component';
+import { UserService } from './services/localserv/user.service';
 
 
 @NgModule({
@@ -32,6 +36,8 @@ import { CoronaPipe } from './pages/corona/corona.pipe';
     ChemistComponent,
     CoronaComponent,
     CoronaPipe,
+    LangTransPipe,
+    LanguagewatchComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,7 @@ import { CoronaPipe } from './pages/corona/corona.pipe';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [AlertifyService,AuthService,LoginGuard],
+  providers: [AlertifyService,AuthService,LoginGuard,LangTranslationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

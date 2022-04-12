@@ -10,11 +10,23 @@ export class ErrorHandling {
     } else {
       errorMessage = 'Sistemsel bir hata ';
     }
+
+
+    let errorDiv = document.querySelector("#errorDiv") as HTMLDivElement;
+    errorDiv.innerText=JSON.stringify(err.error.message);
+
     console.log(err.error.message);
     return throwError(() => new Error(errorMessage));
   }
 
   tapIntercepter(data: any): void {
+
+    let infoDiv = document.querySelector("#infoDiv") as HTMLDivElement;
+
+  //  infoDiv.innerText="ERRORRRRRRR";
+
+  infoDiv.innerText=JSON.stringify(data);
+
     //  console.log(JSON.stringify(data));
   }
 }

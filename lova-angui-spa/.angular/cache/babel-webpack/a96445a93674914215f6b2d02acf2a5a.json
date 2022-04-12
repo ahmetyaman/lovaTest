@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const ServConfig = {\n  // ApiPath:\"http://localhost:7463/api\" \n  ApiPath: \"http://localhost:3000\"\n};","map":null,"metadata":{},"sourceType":"module"}

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChemistComponent } from './pages/chemist/chemist.component';
 import { CoronaComponent } from './pages/corona/corona.component';
+import { LanguagewatchComponent } from './pages/languagewatch/languagewatch.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SpecialFormComponent } from './pages/special-form/special-form.component';
 import { UserOperationComponent } from './pages/user-operation/user-operation.component';
@@ -48,7 +49,10 @@ const routes: Routes = [
     component: ChemistComponent,
     canActivate:[LoginGuard]
   },
-
+ {
+   path:"languagewatch",
+   component:LanguagewatchComponent
+ }
 ];
 
 @NgModule({

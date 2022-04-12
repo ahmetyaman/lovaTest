@@ -1,6 +1,11 @@
 {
   "users": [
     {
+      "userName": "ahmet",
+      "password": "123",
+      "id": 1
+    },
+    {
       "userName": "Ali",
       "password": "734rttrtdşgh",
       "id": 2
@@ -20,5 +25,60 @@
       "password": "fg6767f",
       "id": 5
     }
+  ],
+  "languages": [
+		  {
+			"lang_type":"tr",
+			"words": [
+			  {
+				"txt_name": "adi_soyadi_",
+				"txt_lang": "Adı Soyadı"
+			  },
+			  {
+				"txt_name": "tarih_",
+				"txt_lang": "Tarih"
+			  }
+			 ]
+	     },
+		  {
+			"lang_type":"en",
+			"words": [
+			  {
+				"txt_name": "adi_soyadi_",
+				"txt_lang": "Name Surname"
+			  },
+			  {
+				"txt_name": "tarih_",
+				"txt_lang": "Date"
+			  }
+			 ]
+	     },
+		  {
+			"lang_type":"es",
+			"words": [
+			  {
+				"txt_name": "adi_soyadi_",
+				"txt_lang": "Domingex"
+			  },
+			  {
+				"txt_name": "tarih_",
+				"txt_lang": "AStala Vista"
+			  }
+			 ]
+	     },
+		  {
+			"lang_type":"ch",
+			"words": [
+			  {
+				"txt_name": "adi_soyadi_",
+				"txt_lang": "Chan Chun"
+			  },
+			  {
+				"txt_name": "tarih_",
+				"txt_lang": "Bruce LEE"
+			  }
+			 ]
+	     }
+ 
   ]
 }
